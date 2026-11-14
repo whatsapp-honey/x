@@ -1,15 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My Landing Page</title>
-
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -20,10 +16,9 @@ html, body {
 }
 
 .page {
-  position: relative;
-  width: 100%;
   min-height: 100vh;
   min-height: 100svh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +26,7 @@ html, body {
   isolation: isolate;
 }
 
-.bg-video {
+.bg {
   position: fixed;
   inset: 0;
   width: 100%;
@@ -43,7 +38,7 @@ html, body {
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.42);
+  background: rgba(0,0,0,.45);
   z-index: -1;
 }
 
@@ -52,17 +47,16 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 24px 15px;
+  padding: 20px 12px;
 }
 
 .photo {
-  display: block;
   width: 76%;
   max-width: 520px;
-  aspect-ratio: 1.67 / 1;
+  aspect-ratio: 1.67;
   object-fit: cover;
+  display: block;
 }
 
 h1 {
@@ -86,59 +80,51 @@ h1 {
   justify-content: center;
   width: 220px;
   height: 74px;
-  margin-top: 66px;
-  background: #f00000;
+  margin-top: 65px;
+  background: red;
   color: white;
   border-radius: 17px;
-  border: 1px solid #222;
-  box-shadow: 0 4px 8px #0006;
   text-decoration: none;
   font-size: 25px;
   font-weight: 400;
 }
 
-@media (max-width: 480px) {
-  h1 { font-size: 21px; }
+@media(max-width:480px) {
   .photo { width: 78%; }
+  h1 { font-size: 21px; }
 }
 </style>
 </head>
 
 <body>
-
 <main class="page">
 
-  <video class="bg-video"
-    autoplay muted loop playsinline
-    preload="auto"
-    poster="./assets/background-poster.jpg">
-    <source src="./assets/background.mp4" type="video/mp4">
-  </video>
+<video class="bg" autoplay muted loop playsinline
+poster="./background-poster.jpg">
+<source src="./background.mp4" type="video/mp4">
+</video>
 
-  <div class="overlay"></div>
+<div class="overlay"></div>
 
-  <section class="content">
+<section class="content">
 
-    <!-- FOTO STATIS -->
-    <img class="photo"
-      src="./assets/poster.jpg"
-      alt="Photo preview">
+<img class="photo"
+src="./photo.jpg"
+alt="Photo preview">
 
-    <h1>
-      WATCH AND VIEW MY HOT VIDEO<br>
-      COLLECTION
-    </h1>
+<h1>
+WATCH AND VIEW MY HOT VIDEO<br>
+COLLECTION
+</h1>
 
-    <p class="free">FREE</p>
+<p class="free">FREE</p>
 
-    <a class="continue"
-      href="https://byuxyz8.github.io/mypage/Usbeh7hsRsQ8">
-      CONTINUE
-    </a>
+<a class="continue"
+href="https://byuxyz8.github.io/mypage/Usbeh7hsRsQ8">
+CONTINUE
+</a>
 
-  </section>
+</section>
 </main>
-
 </body>
-  </html>
-  
+</html>
